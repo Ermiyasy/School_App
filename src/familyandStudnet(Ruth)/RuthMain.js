@@ -1,10 +1,12 @@
+import React from 'react';
 
-function RithMain() {
+
+function Admin_main() {
   return (
-    <div className="main">
-       Ruthmain.js Feel free to use the folder
+    <div>
+      <h1>Now we are in Ruth  Page</h1>
     </div>
   );
 }
 
-export default RithMain;
+export default Admin_main;
