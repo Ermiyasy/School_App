@@ -6,9 +6,9 @@ import { Outlet } from 'react-router-dom';  // Import Outlet from react-router-d
 function Admin_main() {
   return (
     <div>
-   
+
       <Header />
-        <Outlet />
+        <Outlet /> 
       <Footer />
       
     </div>

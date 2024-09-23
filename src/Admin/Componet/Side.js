@@ -1,3 +1,4 @@
+
 import * as React from 'react';
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -21,9 +22,24 @@ import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
 import SearchIcon from '@mui/icons-material/Search';
 import Typography from '@mui/material/Typography';
-import Admin_Home from '../Page/Admin_Home'; 
+import Admin_Home from '../Page/Admin_Home';
 import logo from '../asset/Logo.jpg';
 import Menuheader from './Menuheader';
+import { Avatar } from '@mui/material';
+import { Link } from "react-router-dom";
+
+import HomeIcon from '@mui/icons-material/Home';
+import SchoolIcon from '@mui/icons-material/School';
+import Parents from '@mui/icons-material/GroupOutlined';
+import SettingProfile from '@mui/icons-material/ManageAccountsOutlined';
+import SettingsIcon from '@mui/icons-material/Settings';
+import studentP from '@mui/icons-material/Person2Rounded';
+import Logout from '@mui/icons-material/SettingsPowerSharp';
+import Message from '@mui/icons-material/EmailRounded';
+import Payment from '@mui/icons-material/AccountBalanceWalletRounded';
+import Announcement from '@mui/icons-material/CampaignRounded';
+
+import "./Componet Css/Admin_side.css"
 
 const drawerWidth = 240;
 
@@ -84,7 +100,7 @@ export default function PersistentDrawerLeft() {
           >
             <MenuIcon />
           </IconButton>
-          <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1,justifyContent:'space-between'}}>
+          <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1, justifyContent: 'space-between' }}>
             {/* Search field */}
             <TextField
               variant="outlined"
@@ -96,7 +112,7 @@ export default function PersistentDrawerLeft() {
                 '& .MuiOutlinedInput-root': {
                   borderRadius: '5px',
                 },
-                justifyContent: 'flex-end' 
+                justifyContent: 'flex-end'
               }}
               InputProps={{
                 startAdornment: (
@@ -106,7 +122,25 @@ export default function PersistentDrawerLeft() {
                 ),
               }}
             />
-            <Menuheader sx={{justifyContent: 'flex-end'}} />
+            <div sx={{ textAlign: 'right' }}>
+              <div style={{ display: 'inline-block', verticalAlign: 'middle' }}>
+                <Avatar
+                  src="/broken-image.jpg"
+                  sx={{
+                    width: 30,
+                    height: 30,
+                    marginX: 1,
+                    marginTop: 1,
+                    marginBottom: 1,
+                  }}
+                />
+              </div>
+              <div style={{ display: 'inline-block', verticalAlign: 'middle' }}>
+                <Menuheader />
+              </div>
+            </div>
+
+
           </Box>
         </Toolbar>
       </AppBar>
@@ -132,7 +166,7 @@ export default function PersistentDrawerLeft() {
               style={{ width: '90px', height: '60px', margin: '10px' }}
             />
             <Box>
-              <Typography variant="h6" component="div">
+              <Typography variant="h6" component="div" className='Logoname'>
                 Ha Geez School App
               </Typography>
             </Box>
@@ -142,30 +176,89 @@ export default function PersistentDrawerLeft() {
           </IconButton>
         </DrawerHeader>
         <Divider />
-        <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
+        <div >
+          <nav>
+            <nav className="menu" >
+              <ul>
+                <li>
+                  <div style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center', gap: '15px', marginLeft: "25px", marginTop:'5px'}}>
+                    <HomeIcon />
+                    <Link className="list-title" to="/Admin_main/">Home</Link>
+                  </div>
+                </li>
+
+                <li>
+                  <div style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center', gap: '15px', marginLeft: "25px" , marginTop:'5px'}}>
+                    <SchoolIcon />
+                    <Link className="list-title" to="/Admin_main/Teacher">Teacher</Link>
+                  </div>
+                </li>
+
+                <li>
+                  <div style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center', gap: '15px', marginLeft: "25px", marginTop:'5px'}}>
+                    <Parents />
+                    <Link className="list-title" to="/Admin_main/Student">Student</Link>
+                  </div>
+                </li>
+                <li>
+                  <div style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center', gap: '15px', marginLeft: "25px", marginTop:'5px'}}>
+                    <Parents />
+                    <Link className="list-title" to="/Admin_main/MangeExam">Parents</Link>
+                  </div>
+                </li>
+                <li>
+                  <div style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center', gap: '15px', marginLeft: "25px", marginTop:'5px'}}>
+                    <Message />
+                    <Link className="list-title" to="/Admin_main/Message">Message</Link>
+                  </div>
+                </li>
+                <li>
+                  <div style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center', gap: '15px', marginLeft: "25px", marginTop:'5px'}}>
+                    <Payment />
+                    <Link className="list-title" to="/Admin_main/Payment">Payment</Link>
+                  </div>
+                </li>
+                <li>
+                  <div style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center', gap: '15px', marginLeft: "25px", marginTop:'5px'}}>
+                    <Announcement />
+                    <Link className="list-title" to="/Admin_main/feedback">Announcement</Link>
+                  </div>
+                </li>
+
+
+              </ul>
+            </nav>
+
+          </nav>
+
+        </div>
         <Divider />
         <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
+          <div >
+            <nav>
+              <nav className="menu" >
+                <ul>
+                  <li>
+                    <SettingProfile />
+                    <Link className="list-title" to="/Admin/Profile">Profile</Link>
+                  </li>
+
+                  <li>
+                    <SettingsIcon />
+                    <Link className="list-title" to="/Admin/Setting">Setting</Link>
+                  </li>
+
+                  <li>
+                    <Logout />
+                    <Link className="list-title" to="/Admin/Logout">Logout</Link>
+                  </li>
+
+                </ul>
+              </nav>
+
+            </nav>
+
+          </div>
         </List>
       </Drawer>
       <Main open={open}>
@@ -175,3 +268,4 @@ export default function PersistentDrawerLeft() {
     </Box>
   );
 }
+ 
