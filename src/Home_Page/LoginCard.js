@@ -15,7 +15,7 @@ function LoginCard() {
     try {
       // Check for specific login conditions
       if (name === 'admin' && password === 'admin') {
-        navigate('/Admin_main/'); // Redirect to Admin_main page
+        navigate('/Admin_main'); // Redirect to Admin_main page
       } else if (name === 'instructor' && password === 'instructor') {
         navigate('/Instructor');
       } else if (name === 'student' && password === 'student') {

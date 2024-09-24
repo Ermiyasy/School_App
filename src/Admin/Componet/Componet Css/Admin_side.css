@@ -38,12 +38,12 @@
     color: hsl(199, 98%, 48%);  
     font-size: 18px; 
     font-family: 'Times New Roman', Times, serif; 
-
+    padding-bottom: 13px;
 } 
  
 .sub-menu{  
     display: none;  
-    margin-left: 10px;  
+    margin-left: 15px;  
  }  
  .menu ul li:hover .sub-menu { 
     display: block; 
@@ -85,6 +85,14 @@
     font-weight: 600;
     font-family: 'Times New Roman', Times, serif; 
     margin-top: 100px;
+ }
+ .last{
+    margin-top: 15px;
+
+ }
+ .last li{
+    margin: 0px;
+    padding-top: 10px;
  }
 
 }

@@ -182,46 +182,46 @@ export default function PersistentDrawerLeft() {
               <ul>
                 <li>
                   <div style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center', gap: '15px', marginLeft: "25px", marginTop:'5px'}}>
-                    <HomeIcon />
-                    <Link className="list-title" to="/Admin_main/">Home</Link>
+                  
+                    <Link className="list-title" to="/Admin_main/Admin_Home"><HomeIcon /> Home</Link>
                   </div>
                 </li>
 
                 <li>
                   <div style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center', gap: '15px', marginLeft: "25px" , marginTop:'5px'}}>
-                    <SchoolIcon />
-                    <Link className="list-title" to="/Admin_main/Teacher">Teacher</Link>
+                  
+                    <Link className="list-title" to="/Admin_main/Teacher"><SchoolIcon />  Teacher</Link>
                   </div>
                 </li>
 
                 <li>
                   <div style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center', gap: '15px', marginLeft: "25px", marginTop:'5px'}}>
-                    <Parents />
-                    <Link className="list-title" to="/Admin_main/Student">Student</Link>
+                   
+                    <Link className="list-title" to="/Admin_main/Student"> <Parents /> Student</Link>
                   </div>
                 </li>
                 <li>
                   <div style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center', gap: '15px', marginLeft: "25px", marginTop:'5px'}}>
-                    <Parents />
-                    <Link className="list-title" to="/Admin_main/MangeExam">Parents</Link>
+                   
+                    <Link className="list-title" to="/Admin_main/Parents"> <Parents />  Parents</Link>
                   </div>
                 </li>
                 <li>
                   <div style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center', gap: '15px', marginLeft: "25px", marginTop:'5px'}}>
-                    <Message />
-                    <Link className="list-title" to="/Admin_main/Message">Message</Link>
+                   
+                    <Link className="list-title" to="/Admin_main/Message"> <Message /> Message</Link>
                   </div>
                 </li>
                 <li>
                   <div style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center', gap: '15px', marginLeft: "25px", marginTop:'5px'}}>
-                    <Payment />
-                    <Link className="list-title" to="/Admin_main/Payment">Payment</Link>
+                    
+                    <Link className="list-title" to="/Admin_main/Payment"><Payment /> Payment</Link>
                   </div>
                 </li>
                 <li>
                   <div style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center', gap: '15px', marginLeft: "25px", marginTop:'5px'}}>
-                    <Announcement />
-                    <Link className="list-title" to="/Admin_main/feedback">Announcement</Link>
+                    
+                    <Link className="list-title" to="/Admin_main/Announcement"><Announcement /> Announcement</Link>
                   </div>
                 </li>
 
@@ -237,20 +237,20 @@ export default function PersistentDrawerLeft() {
           <div >
             <nav>
               <nav className="menu" >
-                <ul>
+                <ul className="last">
                   <li>
-                    <SettingProfile />
-                    <Link className="list-title" to="/Admin/Profile">Profile</Link>
+                   
+                    <Link className="list-title" to="/Admin_main/Profile"> <SettingProfile /> Profile</Link>
                   </li>
 
                   <li>
-                    <SettingsIcon />
-                    <Link className="list-title" to="/Admin/Setting">Setting</Link>
+                  
+                    <Link className="list-title" to="/Admin_main/Setting"><SettingsIcon /> Setting</Link>
                   </li>
 
                   <li>
-                    <Logout />
-                    <Link className="list-title" to="/Admin/Logout">Logout</Link>
+                   
+                    <Link className="list-title" to="/Admin_main/Logout"><Logout />  Logout</Link>
                   </li>
 
                 </ul>
@@ -263,7 +263,7 @@ export default function PersistentDrawerLeft() {
       </Drawer>
       <Main open={open}>
         <DrawerHeader />
-        <Admin_Home />
+      
       </Main>
     </Box>
   );
