@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+
 import React from 'react';
 import { Route, Routes } from "react-router-dom";  // Ensure you have react-router-dom installed
 
@@ -23,11 +24,17 @@ import Announcement from './Admin/Page/Announcement';
 import Setting from './Admin/Page/Setting';
 import Profile from './Admin/Page/Profile';
 import Logout from './Admin/Page/Logout';
+import Parent_Home from './familyandStudnet(Ruth)/Page/Parent_Home';
+import Attendance from './familyandStudnet(Ruth)/Page/Attendance';
+import Grade from './familyandStudnet(Ruth)/Page/Grade';
+
 
 
 function App() {
   return (
     <div className="App">
+
+     
       <Routes>
         {/* Main Routes */}
         <Route path="/" element={<Home />} >
@@ -39,7 +46,7 @@ function App() {
 
         {/* Admin Routes */}
         <Route path="/Admin_main" element={<Admin_main />}>
-          <Route path="Admin_Home" element ={<Admin_Home />} />  {/* Default content for Admin */}
+          <Route path="" element ={<Admin_Home />} />  {/* Default content for Admin */}
           <Route path="Teacher" element={<Teacher />} /> {/* This will render Teacher inside Admin_main's Outlet */}
           <Route path="Student" element={<Student />} />
           <Route path="Parents" element={<Parents />} />
@@ -50,13 +57,27 @@ function App() {
            <Route path="Profile" element={<Profile/>}/>
            <Route path="Setting" element={<Setting/>}/>
            <Route path="Announcement" element={<Announcement/>}/>
-           <Route path="Logout" element={<Logout/>}/>
+           <Route path="Logout" element={<Home/>}/>
         </Route>
 
         {/* Other Routes */}
-        <Route path="/HomeRoom" element={<FikerMain />} />
-        <Route path="/Family" element={<RuthMain />} />
+        <Route path="/HomeRoom" element={<FikerMain />} >
+        </Route>
+        <Route path="/Family" element={<RuthMain />} >
+          <Route path="" element={<Parent_Home/>} />  
+          <Route path="Message" element={<Message />} />
+          <Route path="Payment" element={<Payment />} />
+          <Route path="Attendance" element={<Attendance />} />
+          <Route path="Grade" element={<Grade />} />
+          <Route path="Announcement" element={<Announcement />} />
+          {/* The other side Minu */}
+           <Route path="Profile" element={<Profile/>}/>
+           <Route path="Setting" element={<Setting/>}/>
+           <Route path="Announcement" element={<Announcement/>}/>
+           <Route path="Logout" element={<Home/>}/>
+        </Route>
       </Routes>
+
     </div>
   );
 }
