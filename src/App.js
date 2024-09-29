@@ -23,7 +23,7 @@ import Payment from './Admin/Page/Payment';
 import Announcement from './Admin/Page/Announcement';
 import Setting from './Admin/Page/Setting';
 import Profile from './Admin/Page/Profile';
-import Logout from './Admin/Page/Logout';
+
 import Parent_Home from './familyandStudnet(Ruth)/Page/Parent_Home';
 import Attendance from './familyandStudnet(Ruth)/Page/Attendance';
 import Grade from './familyandStudnet(Ruth)/Page/Grade';
