@@ -1,19 +1,21 @@
+import React from 'react';
+import Header from '../Componet/Header';  // Import your Header component
+import Footer from '../Componet/Footer';  // Import your Footer component
+import { Outlet } from 'react-router-dom';  // Import Outlet from react-router-dom
+import Admin_Home from '../Page/Admin_Home';
 
-function  ERMIMain() {
+function Admin_main() {
   return (
-<<<<<<< Updated upstream
-    <div className="main">
-       ERMIMain.js Feel free to use the folder
-=======
+
     <div>
 
       <Header />
         <Outlet /> 
+
       <Footer/>
-      
->>>>>>> Stashed changes
+
     </div>
   );
 }
 
-export default ERMIMain;
+export default Admin_main;

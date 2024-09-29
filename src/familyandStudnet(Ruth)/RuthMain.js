@@ -1,3 +1,4 @@
+import React from 'react';
 
 import React from 'react';
 import Header from './Componet/Header';  // Import your Header component
@@ -10,6 +11,7 @@ function Parent_main() {
        <Header />
         <Outlet /> 
       <Footer/>
+
 
     </div>
   );

@@ -5,18 +5,17 @@ import Title from "./Title";
 
 import { Card } from "@mui/material";
 import './Admin_Home.css'
-
 function preventDefault(event) {
   event.preventDefault();
 }
 
-function Message() {
+function Student() {
   return (
     <>
     <h1>
-     Message
+     Student
      </h1>
     </>
   );
 }
-export default Message;
+export default Student;

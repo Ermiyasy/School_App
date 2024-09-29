@@ -1,5 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import { Route, Routes } from "react-router-dom";  // Ensure you have react-router-dom installed
+
+import FikerMain from "./HomeRoom(fiker)/FikerMain";
+import RuthMain from "./familyandStudnet(Ruth)/RuthMain";
+
+import Admin_main from "./Admin/Hageez/Admin_main";
+import Admin_Home from './Admin/Page/Admin_Home';
+
+import Home from './Home_Page/Home';
+import LoginCard from './Home_Page/LoginCard';
+import Feedback from './Home_Page/Feedback';
+import About from './Home_Page/About';
+import Contact from './Home_Page/Contact';
+import Teacher from './Admin/Page/Teacher';
+import Student from './Admin/Page/Student';
+import Parents from './Admin/Page/Parents';
+import Message from './Admin/Page/Message';
+import Payment from './Admin/Page/Payment';
+import Announcement from './Admin/Page/Announcement';
+import Setting from './Admin/Page/Setting';
+import Profile from './Admin/Page/Profile';
+import Logout from './Admin/Page/Logout';
+
 
 import React from 'react';
 import { Route, Routes } from "react-router-dom";  // Ensure you have react-router-dom installed
@@ -34,7 +57,6 @@ function App() {
   return (
     <div className="App">
 
-     
       <Routes>
         {/* Main Routes */}
         <Route path="/" element={<Home />} >
