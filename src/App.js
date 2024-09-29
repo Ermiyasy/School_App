@@ -60,9 +60,11 @@ function App() {
            <Route path="Logout" element={<Home/>}/>
         </Route>
 
-        {/* Other Routes */}
-        <Route path="/HomeRoom" element={<FikerMain />} >
+ {/* Home Room Teacher Routes */}
+         <Route path="/HomeRoom" element={<FikerMain />} >
         </Route>
+               
+ {/* parent or student Routes */}
         <Route path="/Family" element={<RuthMain />} >
           <Route path="" element={<Parent_Home/>} />  
           <Route path="Message" element={<Message />} />
