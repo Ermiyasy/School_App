@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import Title from "./Title";
 
 import { Card } from "@mui/material";
-import './Admin_Home.css'
+import './Admin_Home.css';
 
 function preventDefault(event) {
   event.preventDefault();

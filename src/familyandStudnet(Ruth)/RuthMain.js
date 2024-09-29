@@ -1,12 +1,22 @@
 import React from 'react';
 
+import React from 'react';
+import Header from './Componet/Header';  // Import your Header component
+import Footer from './Componet/Footer';  // Import your Footer component
+import { Outlet } from 'react-router-dom';  // Import Outlet from react-router-dom
 
-function Admin_main() {
+function Parent_main() {
   return (
     <div>
-      <h1>Now we are in Ruth  Page</h1>
+       <Header />
+        <Outlet /> 
+      <Footer/>
+
+
     </div>
   );
 }
 
-export default Admin_main;
+
+export default Parent_main;
+

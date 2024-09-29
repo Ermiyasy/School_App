@@ -16,13 +16,14 @@ function LoginCard() {
       // Check for specific login conditions
       if (name === 'admin' && password === 'admin') {
         navigate('/Admin_main'); // Redirect to Admin_main page
-      } else if (name === 'instructor' && password === 'instructor') {
-        navigate('/Instructor');
-      } else if (name === 'student' && password === 'student') {
-        navigate('/Student');
-      } else if (name === 'head' && password === 'head') {
-        navigate('/Dep');
-      } else {
+
+      } else if (name === 'teacher' && password === 'teacher') {
+        navigate('/HomeRoom');
+      } else if (name === 'parent' && password === 'parent') {
+        navigate('/Family');
+      } 
+       else {
+
         setError('Invalid User Name or Password');
       }
     } catch (error) {

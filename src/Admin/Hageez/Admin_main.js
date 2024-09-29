@@ -6,12 +6,14 @@ import Admin_Home from '../Page/Admin_Home';
 
 function Admin_main() {
   return (
+
     <div>
 
       <Header />
         <Outlet /> 
-  
-      
+
+      <Footer/>
+
     </div>
   );
 }
